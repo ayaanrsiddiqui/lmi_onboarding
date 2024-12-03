@@ -11,8 +11,15 @@ After initializing an OpenAI and ChromaDB client, the script creates several fun
 The main script checks if ChromaDB has the embeddings, and if not, it creates them using an OpenAI Embedding function. Next, it gets the user query, and retrieves the appropriate text files from the embeddings from ChromaDB. After that, it creates a prompt including those text files as context and the user query and sends it to ChatGPT, and outputs the response. 
 
 ## to run
+A virtual environment should also be created, and should have
+```console
+pip install openai chromadb
+```
+run before running the script. 
+
 The terminal command
 ```console
 export OPENAI_API_KEY="your_api_key"
 ```
-must be run before running the script, either directly or through a .env file, and replacing ```your_api_key``` with an API key from OpenAI.
+must also be run before running the script, either directly or through a .env file, and replacing ```your_api_key``` with an API key from OpenAI.
+
